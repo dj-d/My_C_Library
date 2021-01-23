@@ -25,6 +25,26 @@ void in_order_visit(struct Node *node) {
     }
 }
 
+void post_order_visit(struct Node *node) {
+    if (node != NULL) {
+        in_order_visit(node->left);
+
+        in_order_visit(node->right);
+        
+        printf("%d ", node->data);
+    }
+}
+
+void pre_order_visit(struct Node *node) {
+    if (node != NULL) {
+        printf("%d ", node->data);
+
+        in_order_visit(node->left);
+
+        in_order_visit(node->right);
+    }
+}
+
 void print2DUtil(struct Node *root, int space) {
     if (root == NULL) {
         return;
