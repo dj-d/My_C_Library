@@ -3,8 +3,11 @@
 
 int count = 0;
 
-void create_stack(struct Stack *s) {
+struct Stack *create_stack() {
+    struct Stack *s = malloc(sizeof(struct Stack));
     s->top = -1;
+
+    return s;
 }
 
 void push(struct Stack *s, int item) {

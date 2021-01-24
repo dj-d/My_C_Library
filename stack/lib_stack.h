@@ -14,7 +14,7 @@ struct Stack {
     int top;
 };
 
-void create_stack(struct Stack *s);
+struct Stack *create_stack();
 void push(struct Stack *s, int item);
 void pop(struct Stack *s);
 int is_full(struct Stack *s);
