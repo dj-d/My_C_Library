@@ -1,14 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#ifndef LIB_TAIL_H
-#define LIB_TAIL_H
+#ifndef LIB_QUEUE_H
+#define LIB_QUEUE_H
 
 #define SIZE 40
 
 #define TRUE 1
 #define FALSE 0
-
 
 struct Queue {
     int items[SIZE]; // Array degli elementi

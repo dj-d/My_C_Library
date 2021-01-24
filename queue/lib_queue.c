@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "lib_tail.h"
+#include "lib_queue.h"
 
 struct Queue *create_queue() {
     struct Queue *q = malloc(sizeof(struct Queue));
