@@ -6,6 +6,10 @@
 
 #define SIZE 40
 
+#define TRUE 1
+#define FALSE 0
+
+
 struct Queue {
     int items[SIZE]; // Array degli elementi
 
