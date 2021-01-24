@@ -11,10 +11,20 @@ struct Node *create_node(int data) {
     return new_node;
 }
 
-void add_node(struct Node *src, int data) {
+void add_node(struct Node **src, int data) {
     struct Node *new_node = create_node(data);
 
-    src->next = new_node;
+    struct Node *last = *src;
+
+    if (*src == NULL) {
+        *src = new_node;
+    } else {
+        while (last->next != NULL) {
+            last = last->next;
+        }
+
+        last->next = new_node;
+    }
 }
 
 void print_list(struct Node *n) {
