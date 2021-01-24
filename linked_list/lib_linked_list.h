@@ -10,6 +10,7 @@ struct Node {
 };
 
 struct Node *create_node(int data);
+void append(struct Node *src, int data);
 void add_node(struct Node **src, int data);
 void print_list(struct Node *n);
 

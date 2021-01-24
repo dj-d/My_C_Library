@@ -11,6 +11,18 @@ struct Node *create_node(int data) {
     return new_node;
 }
 
+// In this case we take it for granted that there is a head
+void append(struct Node *src, int data) {
+    struct Node *last = src;
+
+    while (last->next != NULL) {
+        last = last->next;
+    }
+
+    last->next = create_node(data);
+}
+
+// In this case we check if there is a head or not
 void add_node(struct Node **src, int data) {
     struct Node *new_node = create_node(data);
 
