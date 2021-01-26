@@ -37,3 +37,17 @@ void add_edge(struct Graph *graph, int src, int dest) {
 //    new_node->next = graph->adj_lists[dest];
 //    graph->adj_lists[dest] = new_node;
 }
+
+void show_graph(struct Graph *graph) {
+    for (int i = 0; i < graph->num_vertices; i++) {
+        struct Node *temp = graph->adj_lists[i];
+
+        printf("Adj list of vertex: %d -> ", i);
+
+        while (temp != NULL) {
+            printf("%d -> ", temp->vertex);
+            temp = temp->next;
+        }
+        printf("\n");
+    }
+}

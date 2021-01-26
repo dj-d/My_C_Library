@@ -18,5 +18,6 @@ struct Graph {
 struct Node *create_node(int v);
 struct Graph *create_graph(int v);
 void add_edge(struct Graph *graph, int src, int dest);
+void show_graph(struct Graph *graph);
 
 #endif
