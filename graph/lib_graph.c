@@ -51,3 +51,24 @@ void show_graph(struct Graph *graph) {
         printf("\n");
     }
 }
+
+
+void dfs_visit(struct Graph *graph, int vertex) {
+    struct Node *adj_list = graph->adj_lists[vertex];
+
+    graph->visited[vertex] = 1;
+
+    printf("Visited %d\n", vertex);
+
+    while (adj_list != NULL) {
+        int connected_vertex = adj_list->vertex;
+
+        printf("Connected vertex: %d\n", connected_vertex);
+
+        if (graph->visited[connected_vertex] == 0) {
+            dfs_visit(graph, connected_vertex);
+        }
+
+        adj_list = adj_list->next;
+    }
+}
