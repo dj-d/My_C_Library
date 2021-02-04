@@ -59,3 +59,13 @@ int get_min(int x, int y) {
         return y;
     }
 }
+
+void prt_matrix_of_int(int row, int col, int matrix[row][col]) {
+    for (int i = 0; i < row; i++) {
+        for (int j = 0; j < col; j++) {
+            printf("%d ", matrix[i][j]);
+        }
+
+        printf("\n");
+    }
+}
